@@ -28,7 +28,7 @@ func getAssetPath(mediaType string) string {
 }
 
 func (cfg apiConfig) getObjectURL(key string) string {
-	return fmt.Sprintf("%s,%s", cfg.s3Bucket, key)
+	return fmt.Sprintf("%s/%s", cfg.s3CfDistribution, key)
 }
 
 func (cfg apiConfig) getAssetDiskPath(assetPath string) string {
